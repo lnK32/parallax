@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:fonts1 ;
+    src: url(fonts1/cursiva/Cursiva.otf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0),;
+    font-family:sans-serif;
+}
+
+h1, h2{
+    font-size: 40px;
+    font-weight: 800;
+    color: #000000;
+    
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background: #e9e7e7;
+}
+
+.container{
+    font-family: fonts1;
+    font-size: 30px;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: surgir 2.1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 40%;
+}
+
+section.modulo{
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.4em;
+}
+
+section.modulo h2{
+    margin-bottom: 40px;
+    font-size: 40px;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+section.modulo.content{
+    padding: 40px;
+    background: #f8e5e5;
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+section.modulo.parallax h1{
+    color: #f5f5f5;
+    text-shadow: 5px 5px 5px #02adf0;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+   z-index: 50;  /* prufundidade*/
+
+}
+
+section.modulo.parallax::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0, rgba(0,0,0,0) 30%, #252323 100%);
+  /* background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0)30%, #252323 100%); */
+}
+
+@keyframes surgir {
+    from{
+         opacity: 0;
+         translate: -100vw 0;
+    }
+
+    to{
+        opacity: 1;
+        translate: 0 0;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section.modulo.parallax-1{
+    background-image: url(img/coffee-171653_1920.jpg);
+}
+section.modulo.parallax-2{
+    background-image: url(img/coffee-2608864_1920.jpg);
+}
+section.modulo.parallax-3{
+    background-image: url(img/pancakes-2291908_1920.jpg);
+}
+
+
+@media all and (max-width: 760px){
+   
+    section.modulo{
+        margin-bottom: 10px;
+        text-align: justify;
+        font-size: 1em;
+} 
+
+  section.modulo.parallax h1 {
+    font-size: 1em;
+  }
+ 
+ section.modulo.content{
+    width: 80%;
+    background: #fff;
+ }
+
+ }
+
+ footer{
+    font-size: 25px;
+    text-align: center;
+    color: blue;
+ }
